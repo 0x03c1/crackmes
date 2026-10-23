@@ -1,0 +1,41 @@
+# ==========================================================================
+# GABARITO — NUNCA versionar (revela as respostas da prova aos alunos)
+# ==========================================================================
+# gabarito.csv  = mapa aluno -> senha -> chave XOR
+# src/          = fontes .c gerados (contêm os bytes da senha)
+# roster.txt    = lista de alunos (nomes reais = dado pessoal)
+prova-individual/gabarito.csv
+prova-individual/src/
+prova-individual/roster.txt
+
+# ==========================================================================
+# MANTIDOS no git (distribuição p/ alunos fazerem engenharia reversa):
+#   prova-individual/dist/windows/*.exe
+#   prova-individual/dist/linux/*.elf
+#   crackmes-multistack/ (binários de demo: .jar, .pyc, crackme_cpp, go/crackme...)
+#   todo o material do professor (guias, plano de aula, códigos-fonte da aula)
+# Nada abaixo os ignora — eles sobem normalmente.
+# ==========================================================================
+
+# --------------------------------------------------------------------------
+# Artefatos INTERMEDIARIOS (nao sao distribuidos; regeneraveis)
+# --------------------------------------------------------------------------
+# cache do Python (o crackme.pyc distribuido NAO e afetado)
+__pycache__/
+# intermediario do Java (distribui-se o .jar, nao o .class)
+crackmes-multistack/java/*.class
+# saida de decompilacao do jadx
+saida_jadx/
+
+# --------------------------------------------------------------------------
+# Lixo de sistema operacional / editores
+# --------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
